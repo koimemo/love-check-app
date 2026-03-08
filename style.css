@@ -19,7 +19,7 @@ body {
 
 .card {
   width: 100%;
-  max-width: 460px;
+  max-width: 500px;
   background: #ffffff;
   border-radius: 20px;
   padding: 28px 22px;
@@ -56,26 +56,77 @@ body {
   display: block;
 }
 
-.main-btn {
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-btn {
   width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: #e75480;
-  color: white;
-  font-size: 16px;
+  border: 1px solid #f3bfd0;
+  border-radius: 16px;
+  background: #fff7fa;
+  padding: 16px;
+  text-align: left;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.main-btn:hover {
-  opacity: 0.9;
+.menu-btn:hover {
+  background: #ffeaf1;
+}
+
+.menu-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: #e75480;
+  margin-bottom: 6px;
+}
+
+.menu-text {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.progress-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-label {
+  color: #e75480;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
 }
 
 .question-number {
   font-size: 14px;
   color: #999;
-  margin-bottom: 10px;
+  margin: 0 0 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ffe4ec;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #e75480 0%, #ff8cb0 100%);
+  border-radius: 999px;
+  transition: width 0.25s ease;
 }
 
 .question-text {
@@ -115,6 +166,14 @@ body {
   margin-bottom: 8px;
 }
 
+.result-diagnosis-name {
+  text-align: center;
+  color: #e75480;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
 .result-title {
   text-align: center;
   color: #e75480;
@@ -136,6 +195,32 @@ body {
   margin-bottom: 16px;
 }
 
+.share-btn,
+.main-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.share-btn {
+  background: #1da1f2;
+  margin-bottom: 12px;
+}
+
+.main-btn {
+  background: #e75480;
+}
+
+.share-btn:hover,
+.main-btn:hover {
+  opacity: 0.9;
+}
+
 @media (max-width: 480px) {
   .card {
     padding: 20px 16px;
@@ -148,20 +233,8 @@ body {
   .question-text {
     font-size: 20px;
   }
-}
-.share-btn {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: #1da1f2;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 12px;
-  transition: 0.2s;
-}
 
-.share-btn:hover {
-  opacity: 0.9;
+  .menu-title {
+    font-size: 16px;
+  }
 }
